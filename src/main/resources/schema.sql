@@ -1,21 +1,19 @@
-CREATE TABLE books
-(
-    id       INT PRIMARY KEY,
-    title    VARCHAR(250) NOT NULL,
-    priceOld VARCHAR(250) DEFAULT NULL,
-    price    VARCHAR(250) DEFAULT NULL
-);
-
 CREATE TABLE authors
 (
-    id        INT PRIMARY KEY,
+    id        INT NOT NULL AUTO_INCREMENT,
     firstName VARCHAR(250) NOT NULL,
-    lastName  VARCHAR(250) NOT NULL
+    lastName  VARCHAR(250) NOT NULL,
+    PRIMARY KEY (id)
 );
 
-create table authors_books
+CREATE TABLE books
 (
-    book_id   INT NOT NULL,
+    id       INT NOT NULL AUTO_INCREMENT,
     author_id INT NOT NULL,
-    PRIMARY KEY (book_id, author_id)
+    title    VARCHAR(250) NOT NULL,
+    priceOld VARCHAR(250) DEFAULT NULL,
+    price    VARCHAR(250) DEFAULT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (author_id) REFERENCES authors(id)
 );
+

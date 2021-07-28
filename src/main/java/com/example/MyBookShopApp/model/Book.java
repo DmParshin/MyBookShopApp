@@ -1,13 +1,10 @@
-package com.example.MyBookShopApp.data;
-
-import com.example.MyBookShopApp.model.Author;
-
-import javax.persistence.*;
+package com.example.MyBookShopApp.model;
 
 public class Book {
 
     private Integer id;
 
+    private int authorId;
     private Author author;
     private String title;
     private String priceOld;
@@ -21,12 +18,12 @@ public class Book {
         this.id = id;
     }
 
-    public Author getAuthor() {
-        return author;
+    public int getAuthorId() {
+        return authorId;
     }
 
-    public void setAuthor(Author author) {
-        this.author = author;
+    public void setAuthorId(int authorId) {
+        this.authorId = authorId;
     }
 
     public String getTitle() {
@@ -53,11 +50,20 @@ public class Book {
         this.price = price;
     }
 
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
+    }
+
     @Override
     public String toString() {
         return "Book{" +
                 "id=" + id +
-                ", author='" + author + '\'' +
+                ", authorId=" + authorId +
+                ", author=" + author +
                 ", title='" + title + '\'' +
                 ", priceOld='" + priceOld + '\'' +
                 ", price='" + price + '\'' +
