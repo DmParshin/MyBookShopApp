@@ -29,80 +29,48 @@ public class MainPageController {
     }
 
     //Отложенное — /postponed.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/postponed")
     public String postponedPage() {
         return "postponed";
     }
 
     //Корзина — /cart.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/cart")
     public String cartPage() {
         return "cart";
     }
 
     //Войти — /signin.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/signin")
     public String signinPage() {
         return "signin";
     }
 
     //Поиск — /search/index.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/search")
     public String searchPage() {
         return "/search/index";
     }
 
     //Документы — /documents/index.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/documents")
     public String documentsPage() {
         return "/documents/index";
     }
 
     //О компании — /about.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/about")
     public String aboutPage() {
         return "/about";
     }
 
     //Помощь — /faq.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/faq")
     public String faqPage() {
         return "/faq";
     }
 
     //Контакты — /contacts.html
-    //    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/contacts")
     public String contactsPage() {
         return "/contacts";

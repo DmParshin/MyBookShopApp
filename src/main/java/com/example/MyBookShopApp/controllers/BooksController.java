@@ -23,19 +23,14 @@ public class BooksController {
     public List<Book> bookList(){
         return bookService.getBooksData();
     }
-
     //Новинки — файл /books/recent.html
-//    @ModelAttribute("booksList")
-//    public List<Book> bookList(){
-//        return bookService.getBooksData();
-//    }
     @GetMapping("/books/recent")
     public String recentBookPage(){
         return "books/recent";
     }
 
-    //Популярное — /books/popular.html
 
+    //Популярное — /books/popular.html
     @GetMapping("/books/popular")
     public String popularBookPage(){
         return "books/popular";
