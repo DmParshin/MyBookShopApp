@@ -45,21 +45,21 @@
             <nav class="menuModal" id="navigate">
                 <ul class="menu menu_main">
                     <li class="menu-item" th:class="${main}"><a class="menu-link" th:href="@{/}"
-                                                                href="/index.html">Главная</a>
+                                                                href="/index.html" th:text="#{topbar.main}">Главная</a>
                     </li>
                     <li class="menu-item" th:class="${genres}"><a class="menu-link" th:href="@{/genres}"
-                                                                  href="/genres/index.html">Жанры</a>
+                                                                  href="/genres/index.html" th:text="#{topbar.genres}">Жанры</a>
                     </li>
                     <li class="menu-item" th:class="${recent}"><a class="menu-link" th:href="@{/books/recent}"
-                                                                  href="/books/recent.html">Новинки</a>
+                                                                  href="/books/recent.html" th:text="#{topbar.recent}">Новинки</a>
                     </li>
 
                     <li class="menu-item" th:class="${popular}"><a class="menu-link" th:href="@{/books/popular}"
-                                                                   href="/books/popular.html">Популярное</a>
+                                                                   href="/books/popular.html" th:text="#{topbar.popular}">Популярное</a>
                     </li>
 
                     <li class="menu-item" th:class="${authors}"><a class="menu-link" th:href="@{/authors}"
-                                                                   href="/authors/index.html">Авторы</a>
+                                                                   href="/authors/index.html" th:text="#{topbar.authors}">Авторы</a>
                     </li>
                 </ul>
             </nav>
